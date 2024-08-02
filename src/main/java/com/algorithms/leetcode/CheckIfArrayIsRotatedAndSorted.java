@@ -12,12 +12,12 @@ public class CheckIfArrayIsRotatedAndSorted {
        If we see more than 1, then that means that the array is not sorted.
 
      */
-    private boolean check(int[] nums){
+    private boolean check(int[] nums) {
 
         int conflict = 0;
         int len = nums.length;
 
-        for(int i=0; i < len ; i++){
+        for(int i=0; i < len ; i++) {
             // We are comparing with (i+1) % len
             // because in this way the last comparison would be between
             // last element and first element

@@ -68,8 +68,6 @@ public class BalancedBinaryTree {
             return -1;
         else
             return 1 + Math.abs(lh - rh);
-
-
     }
 
 }
