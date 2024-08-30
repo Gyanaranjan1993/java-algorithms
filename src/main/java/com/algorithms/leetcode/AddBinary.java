@@ -25,8 +25,13 @@ public class AddBinary {
             if(i >= 0) sum += a.charAt(i--) - '0';
             if(j >= 0) sum += b.charAt(j--) - '0';
             carry = sum > 1 ? 1 : 0;
-            res.append(sum % 2); // Doing modulo, so we get when sum-> 3, res -> 1, sum->2 then res-0, sum->1 then res=1
+            res.append(sum % 2); // Doing modulo, so we get when
+            // sum-> 3, res -> 1,
+            // sum-> 2,  res -> 0,
+            // sum-> 1  then res = 1
         }
+
+
         if(carry != 0) res.append(carry);
         return res.reverse().toString();
     }

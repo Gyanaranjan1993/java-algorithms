@@ -44,8 +44,6 @@ public class BSTLevelOrderTraversal {
 
             result.add(sublist);
         }
-
-
         return result;
     }
 }

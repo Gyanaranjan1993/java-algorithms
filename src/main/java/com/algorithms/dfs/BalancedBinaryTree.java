@@ -6,7 +6,7 @@ package com.algorithms.dfs;
   Bruteforce DFS:-
     It's balanced only if the height of left subtree and right subtree is less than or equal to 1
     and also if each sub parent is height balanced.
-    So we can find out if height(leftsubtree - rightsubtree) <=1 && leftsubtree is balanced && right is balanced
+    So we can find out if height(leftsubtree -                                                                                         ) <=1 && leftsubtree is balanced && right is balanced
 
     In this case we are running one recursion to find out if a subtree is balanced
     Also we are running another recursion to get the height of each subtree
