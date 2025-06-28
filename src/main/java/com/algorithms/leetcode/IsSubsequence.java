@@ -1,0 +1,17 @@
+package com.algorithms.leetcode;
+
+public class IsSubsequence {
+    public boolean isSubsequence(String s, String t) {
+        int i = 0;
+        int j = 0;
+
+        while (i < s.length() && j < t.length()) {
+            if (t.charAt(j) == s.charAt(i)) {
+                i++;
+            }
+            j++;
+        }
+
+        return i == t.length();
+    }
+}

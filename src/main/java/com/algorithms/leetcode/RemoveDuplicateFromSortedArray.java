@@ -1,5 +1,8 @@
 package com.algorithms.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RemoveDuplicateFromSortedArray {
 
     /*
@@ -18,16 +21,30 @@ public class RemoveDuplicateFromSortedArray {
 
      */
     public static int removeDuplicates(int[] nums) {
-        int index = 0;
+        int k = 2;
 
-        //time complexity = o(n)
-        for(int i = 1; i< nums.length; i++ ){
-            if(nums[index] < nums[i]){
-                nums[++index] = nums[i];
+        for(int i = 2; i < nums.length ; i++) {
+            if(nums[k-2] != nums[i]){
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+
+    public int removeDuplicatesUsingHashMap(int[] nums) {
+        Map<Integer, Integer> countMap = new HashMap<>();
+        int k = 0;
+
+        for(int i=0; i < nums.length; i++) {
+            countMap.put(nums[i], countMap.getOrDefault(nums[i], 0) + 1);
+            if(countMap.get(nums[i]) <= 2){
+                nums[k] = nums[i];
+                k++;
             }
         }
 
-        return ++index;
+        return k;
     }
 
     public static void main(String[] args) {

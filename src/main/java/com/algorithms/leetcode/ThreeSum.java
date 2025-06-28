@@ -14,10 +14,10 @@ public class ThreeSum {
         List<List<Integer>> result = new ArrayList<>();
 
         for (int value : arr) {
-            for (int j = 0; j < arr.length; j++) {
+            for (int i : arr) {
                 for (int k = 2; k < arr.length; k++) {
-                    if (value + arr[j] + arr[k] == 0 && value != arr[j] && value != arr[k] && arr[j] != arr[k]) {
-                        List<Integer> matchedList = List.of(value, arr[j], arr[k]);
+                    if (value + i + arr[k] == 0 && value != i && value != arr[k] && i != arr[k]) {
+                        List<Integer> matchedList = List.of(value, i, arr[k]);
 
                         if (!result.contains(matchedList)) {
                             result.add(matchedList);

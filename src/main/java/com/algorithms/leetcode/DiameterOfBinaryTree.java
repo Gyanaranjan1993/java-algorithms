@@ -1,5 +1,8 @@
 package com.algorithms.leetcode;
 
+/**
+ * Complex to understand
+ */
 public class DiameterOfBinaryTree {
     private int maxDiam= 0;
     public int diameterOfBinaryTree(TreeNode root) {

@@ -14,7 +14,6 @@ public class LowestCommonAncestorOfBST {
      */
 
     public TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> p, TreeNode<Integer> q) {
-
         int max = Math.max(p.val, q.val);
         int min = Math.min(p.val, q.val);
 
