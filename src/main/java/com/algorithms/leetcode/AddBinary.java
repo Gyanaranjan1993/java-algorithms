@@ -13,7 +13,6 @@ public class AddBinary {
         /*
           Addition of 1 and 0 -> 1
           Addition of 1 and 1 -> 2
-
           so if the sum is greater than 1, we carry 1, else carry zero
             If sum 0 res is 1,     carry is 0
             If sum 1 res is 1,     carry is 1

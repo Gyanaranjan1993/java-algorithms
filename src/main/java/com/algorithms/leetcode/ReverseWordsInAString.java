@@ -21,7 +21,6 @@ public class ReverseWordsInAString {
                 sb.append(" ");
             }
         }
-
         return sb.toString();
     }
 
@@ -38,11 +37,13 @@ public class ReverseWordsInAString {
             if(Character.isLetterOrDigit(s.charAt(i)) && !foundLetter){
                 foundLetter = true;
                 rightIndex = i;
-            } else if(s.charAt(i) == ' ' && foundLetter ) {
+            } else if((s.charAt(i) == ' ' && foundLetter)) {
                 foundLetter = false;
                 leftIndex = i;
                 sb.append(s, leftIndex+1, rightIndex+1);
                 sb.append(" ");
+            } else if(i == 0) {
+                sb.append(s, i, rightIndex+1);
             }
         }
 
@@ -50,6 +51,6 @@ public class ReverseWordsInAString {
     }
 
     public static void main(String[] args) {
-        String reversed = reverse("the sky is blue");
+        System.out.println(reverse("the sky is blue"));
     }
 }

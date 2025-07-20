@@ -61,6 +61,22 @@ public class TwoSum {
         return null;
     }
 
+    public int[] twoSum3(int[] nums, int target){
+        int i = 0;
+        int j = nums.length -1;
+
+        while(i < j ){
+            if(nums[i] + nums[j] > target) j--;
+            else if (nums[i] + nums[j] < target) {
+                i++;
+            } else return new int[]{i,j};
+        }
+
+        return new int[] {-1,-1};
+
+
+    }
+
     public static void main(String[] args) {
 
         int[] input = new int[]{5, 6, 7, 8};
