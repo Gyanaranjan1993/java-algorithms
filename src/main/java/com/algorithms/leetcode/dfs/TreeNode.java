@@ -1,21 +1,9 @@
-package com.algorithms.leetcode;
+package com.algorithms.leetcode.dfs;
 
 public class TreeNode<T> {
     T val;
     TreeNode<T> left;
     TreeNode<T> right;
-
-    public T getVal() {
-        return val;
-    }
-
-    public TreeNode<T> getLeft() {
-        return left;
-    }
-
-    public TreeNode<T> getRight() {
-        return right;
-    }
 
     TreeNode() {
     }

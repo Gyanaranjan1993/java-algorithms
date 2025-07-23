@@ -1,6 +1,9 @@
 package com.algorithms.leetcode;
 
-public class FindPivotIndexInSortedRotatedArray {
+public class
+
+
+FindPivotIndexInSortedRotatedArray {
 
     /*
       Find pivot index using binary search

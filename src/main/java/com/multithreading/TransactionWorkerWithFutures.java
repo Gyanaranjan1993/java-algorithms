@@ -19,7 +19,6 @@ public class TransactionWorkerWithFutures {
 
         try {
             List<Future<String>> results = executor.invokeAll(transactionTasks);
-
             for (Future<String> future : results) {
                 try {
                     System.out.println(">>> " + future.get()); // Retrieve result

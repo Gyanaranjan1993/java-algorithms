@@ -14,7 +14,6 @@ public class HappyNumber {
             if(n == 1)
                 return true;
         }
-
         return false;
     }
 
@@ -28,7 +27,7 @@ public class HappyNumber {
         return sum;
     }
 
-    static boolean isHappy2(int n) {
+    static boolean isHappy2 (int n) {
         int slowPointer = getNextNumber(n);
         int fastPointer = getNextNumber(getNextNumber(n));
 
