@@ -1,5 +1,7 @@
 package com.collections;
 
+import java.util.TreeSet;
+
 public class CustomArrayList {
 
     static int DEFAULT_CAPACITY = 10;

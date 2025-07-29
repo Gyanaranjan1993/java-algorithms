@@ -24,6 +24,22 @@
 //                .limit(3)
 //                .collect(Collectors.toList());
 //
+//        numbers.stream()
+//                .mapToInt(a -> a*a)
+//                .sum();
+//
+//        List<String> names2 = Arrays.asList("Alice", "John", "Bob", "Jane");
+//
+//        names2.stream()
+//                .filter(name -> name.startsWith("J")).findFirst();
+//
+//        names2.stream()
+//                .filter(s -> s.length() > 5)
+//                .count();
+//
+//        names2.stream()
+//                .collect(Collectors.groupingBy
+//                        (string -> string.charAt(0)));
 //
 //        List<String> words2 = List.of("Java", "", "Streams", "API");
 //        String result = words2.stream()
@@ -62,8 +78,6 @@
 //                .filter(n -> n % 2 == 0)
 //                .mapToInt(n -> n * n)
 //                .sum();
-//
-//        List<String> names2 = List.of("Alice", "Bob", "Alice", "Eve", "Bob", "Tom");
 //
 //        names2.stream()
 //                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
@@ -120,6 +134,13 @@
 //
 //        people.stream()
 //                .max(Comparator.comparing(Person::age));
+//
+//        people.stream()
+//                .sorted(Comparator.comparingInt(Person::age).reversed())
+//                .findFirst()
+//                .map(Person::name);
+//        people.stream()
+//                .reduce(0,(partialAge, person) -> partialAge + person.age, Integer::sum);
 //
 //    }
 //

@@ -1,6 +1,6 @@
 package com.algorithms.hackerrank;
 
-public class GreatestCommonDivisor {
+public class    GreatestCommonDivisor {
     public static int gcd(int a, int b) {
         while(b != 0) {
             int temp = b;

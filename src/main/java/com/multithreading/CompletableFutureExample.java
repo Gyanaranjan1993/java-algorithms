@@ -52,8 +52,11 @@ public class CompletableFutureExample {
                     return "Failure";
                 });
 
-        CompletableFuture<String> result4 = result1.thenCombine(result2, (r1, r2) -> String.join(",", r1, r2))
+        CompletableFuture<String> result4 = result1
+                .thenCombine(result2, (r1, r2) -> String.join(",", r1, r2))
                 .thenCombine(result3, (r1, r2) -> String.join(",", r1, r2));
+
+        result4.thenAccept(s -> System.out.println(s));
 
         try {
             return result4.get();

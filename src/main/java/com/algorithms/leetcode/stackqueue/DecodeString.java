@@ -1,6 +1,14 @@
 package com.algorithms.leetcode.stackqueue;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 import java.util.Stack;
+import java.util.TreeMap;
+import java.util.stream.Stream;
 
 /*
 Given an encoded string, return its decoded string.
@@ -93,9 +101,10 @@ public class DecodeString {
      */
     public String decodeString(String s) {
         int k = 0;
+        Map<String, String> map = new TreeMap<>((o1, o2) -> o1.compareTo(o2));
         Stack<StringBuilder> stringStack = new Stack<>();
         Stack<Integer> countStack = new Stack<>();
-        StringBuilder decoded = new StringBuilder();
+        StringBuilder decoded;
         StringBuilder current = new StringBuilder();
         for(char ch: s.toCharArray()) {
             if(Character.isDigit(ch)){

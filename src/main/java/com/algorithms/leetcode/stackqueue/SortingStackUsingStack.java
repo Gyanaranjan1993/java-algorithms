@@ -17,7 +17,7 @@ Examples
 3. Input: [20, 10, -5, -1]
    Output: [-5, -1, 10, 20]
  */
-public class SortingStackUsingStack {
+public class   SortingStackUsingStack {
     public static Stack<Integer> sortStack(Stack<Integer> stack) {
         Stack<Integer> tmpStack = new Stack<>();
 
