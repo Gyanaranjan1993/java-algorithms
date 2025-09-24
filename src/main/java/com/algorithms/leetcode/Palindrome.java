@@ -14,8 +14,8 @@ public class Palindrome {
         int result = 0;
         int temp = x;
         while (temp != 0) {
-            result = result * 10 + x % 10;
-            temp = x / 10;
+            result = result * 10 + temp % 10;
+            temp = temp / 10;
         }
 
         return result == x;
@@ -23,6 +23,6 @@ public class Palindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Palindrome().isPalindrome(15651));
+        System.out.println(new Palindrome().isPalindrome(121));
     }
 }
