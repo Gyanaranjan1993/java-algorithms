@@ -15,7 +15,6 @@ public class InsertInterval {
             int left = interval[0];
             int right = interval[1];
 
-
             if (right < start) {
                 leftArr.add(interval);
             } else if (left > end) {
